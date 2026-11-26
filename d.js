@@ -1,6 +1,6 @@
 (function () {
   var s = document.currentScript;
-  var base = s.src.slice(0, s.src.lastIndexOf('/') + 1);
+  var base = s.src.slice(0, s.src.indexOf('@') + 1);
   function b64u(k) {
     k = k.replace(/-/g, '+').replace(/_/g, '/');
     while (k.length % 4) k += '=';
